@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    # Подключение к PostgreSQL: база shop2 должна существовать (см. README).
+    # На другом компьютере поменяйте адрес, логин и пароль на свои.
+    url: jdbc:postgresql://localhost:5432/shop2
+    username: postgres
+    password: wurtl2029
+  # Имя приложения
+  application:
+    name: demo
+
+  jpa:
+    # Настройки JPA (Hibernate)
+    hibernate:
+      # update: Hibernate сам создаёт недостающие таблицы и колонки при запуске.
+      # Существующие данные не удаляются, но и сложные изменения схемы (переименование, смена типа) он не делает.
+      ddl-auto: update
+    # Печатать SQL-запросы в консоль (удобно при разработке; на боевом сервере лучше выключить)
+    show-sql: true
